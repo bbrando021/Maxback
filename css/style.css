@@ -1,0 +1,63 @@
+#prechatDiv {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+#prechatButton {
+  background-color: #5093b7; 
+    border: none;
+    font-weight: bold;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 17px;
+    border-style: solid;
+    border-color: #70952e;
+}
+#prechatButton:active { 
+    background-color: #70952e;
+}
+#chatDiv {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+#body {
+  background-image: url("bcg.png");
+  background-attachment: fixed;
+  background-size: cover
+}
+#chatArea  {
+  background-image: url("graybcg.jpg");
+  background-size: cover;
+  resize: none;
+  border-style: solid;
+}
+#chatText {
+  background-color: gray;
+}
+#submitButton {
+    background-color: #5093b7; 
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 6px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+#close {
+    background-color: #70952e; 
+    color: white;
+    padding: 6px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+}
