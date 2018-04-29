@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body id='body'>
-    <div id='chatDiv'>
-        <textarea id="chatArea" rows="18" cols="35"></textarea><br>
-        <input id="chatText" type="text" name="chatText">
-        <button id="submitButton" type="button">Chat!</button>
+<div id='backgroundImage'>
+    <!--<div id='UAT'>-->
+    <!--    <span id='UATTitle'>For when any issues occur</span>-->
+    <!--    <div id='UATPic'></div>-->
+    <!--    <textarea id="UATSubmit" placeholder='This is a testing tool. Please provide any feedback, or explain an issue and submit as they occur. All chatbot conversation is logged.' type="text" name="UATSubmit"></textarea>-->
+    <!--</div>-->
+    <div id="chatBot">
+        <!--This is where the actual chat box will be contained-->
+        <div id='chatDiv'>
+
+            <div id='windowTitle'>
+                <p id='windowTitleText'>WELCOME TO MAXCHAT</p>
+                <!--This is the button to display the close button-->
+                <button id="minimize" type="button"> -
+                    <span id="tooltip1">Minimize</span>
+                </button>
+                <button id="close" type="button"> X
+                    <span id="tooltip">Close</span>
+                </button>
+            </div>
+
+            <div id='zoomText'>
+                <button id="magnify" type="button"> + </button>
+                <button id="contract" type="button">  -  </button>
+                 <span id="tooltip2">Zoom</span>
+            </div>
+            
+            <div id="darkTheme">
+                <button id="changeTheme" type="button"></button>
+                <span id="tooltip3">Dark Theme</span>
+            </div>
+
+            <div id='chatWindow'>
+            </div>
+
+            <div id='inputArea'>
+                <!--This is the text area where you type-->
+                <textarea id="chatText" placeholder='Type your message here, and press Enter to send' type="text" name="chatText"></textarea>
+            </div>
+
+        </div>
+
+        <div id="prechatDiv">
+            <button id="prechatButton" type="button">Hi, I'm Max!</button>
+        </div>
+
     </div>
+</div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
