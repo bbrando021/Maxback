@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <link rel="stylesheet" href="/css/styleAdmin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body id='body'>
+
+    <div id="topBanner">
+        <div id='logo'></div>
+        <iframe name="hiddenFrame" id="formUploadHide"></iframe>
+        <form ref='uploadForm' id='uploadForm' action='https://maxback-chatbot-cloned-new-bbrando0211.c9users.io/upload' method='post' target='hiddenFrame' encType="multipart/form-data">
+            <p id='dbTitle'>Device Database Update</p>
+            <input type="file" id='fileData' name="sampleFile" />
+            <br>
+            <input type='submit' id='submitButton' value='Upload!' />
+        </form>
+    </div>
+    <div id='infoPage'>
+        <div id='reporting'>
+            <button type='button' id='chatStats'>ChatBot Stats</button>
+            <button type='button' id='conversations'>Conversation Stats</button>
+            <button type='button' id='devicesQuoted'>Devices Quoted</button>
+        </div>
+    </div>
+
+    <div id='searchTool'>
+        <div id='display'>
+            <input id='search' type="search" name="search" placeholder="Search...">
+        </div>
+        <div class='radio' id='radio'>
+            <input type="radio" id="keyword" name="radio-group" checked>
+            <label for="keyword">By Keyword</label>
+            <p></p>
+            <input type="radio" id="price" name="radio-group">
+            <label for="price">By Price</label>
+        </div>
+    </div>
+
+    <div id='tableDiv' class="w3-container">
+        <h2 id='tableTitle'></h2>
+
+        <table id='table' class="w3-table-all w3-hoverable">
+            <thead id='tableHead'>
+                <tr id='tableFields' class="w3-indigo">
+                </tr>
+            </thead>
+            <tbody id='tableBody'>
+            </tbody>
+        </table>
+    </div>
+
+    <div id='footer'>
+
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='sourceAdmin.js'></script>
+
+</html>
