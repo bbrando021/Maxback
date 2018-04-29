@@ -1,63 +1,532 @@
-#prechatDiv {
-  position: fixed;
-  bottom: 0;
-  right: 0;
+/*-----------------------CONTAINS EVERYTHING------------------------------*/
+
+#body {
+
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
 }
-#prechatButton {
-  background-color: #5093b7; 
-    border: none;
-    font-weight: bold;
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    font-size: 17px;
-    border-style: solid;
-    border-color: #70952e;
-}
-#prechatButton:active { 
-    background-color: #70952e;
-}
-#chatDiv {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
+
 #body {
   background-image: url("bcg.png");
-  background-attachment: fixed;
-  background-size: cover
+  /*background-size: 100%;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-repeat: no-repeat;
 }
-#chatArea  {
-  background-image: url("graybcg.jpg");
+
+/*---------------------PRECHAT BUTTONS GO HERE----------------------------*/
+
+#prechatDiv {
+  position: fixed;
+  bottom: 1.8%;
+  right: 2.5%;
+}
+
+#prechatButton {
+  background: #ffffff;
+  background-image: url("maxX.png");
+  /* fallback */
+  background-image: url("maxX.png"), linear-gradient(#afafaf, #ffffff);
   background-size: cover;
-  resize: none;
-  border-style: solid;
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 50%;
+  text-shadow: 1px 1px 15px #000000;
+  -webkit-box-shadow: 0px 0px 8px #ffffff;
+  -moz-box-shadow: 0px 0px 8px #ffffff;
+  box-shadow: 0px 0px 8px #000000;
+  font: 'Open Sans', Helvetica, Arial, 'Sans-serif';
+  color: #ffffff;
+  font-size: 16px;
+  height: 110px;
+  width: 110px;
+  padding: 110px 0px 0px 0px;
+  text-decoration: none;
+  border: none;
+  animation-name: flash;
+  animation-duration: 1.5s;
+  animation-delay: 3s;
+  animation-iteration-count: 10;
 }
-#chatText {
-  background-color: gray;
+
+@keyframes flash {
+  0% {
+    box-shadow: 0px 0px 10px #000000;
+    background-image: url("maxX.png"), linear-gradient(#afafaf, #ffffff);
+  }
+  50% {
+    box-shadow: none;
+    background-image: url("maxX.png"), linear-gradient(#939292, #ffffff);
+  }
 }
-#submitButton {
-    background-color: #5093b7; 
-    border: none;
-    color: white;
-    font-weight: bold;
-    padding: 6px 9px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
+
+#prechatButton:hover {
+  background: transparent;
+  background-image: url("maxX.png");
+  background-size: cover;
+  text-decoration: none;
 }
+
+
+
+/*----------------------------CONTAINS ALL CHAT INTERFACE--------------------------------------*/
+
+#chatDiv {
+  background-color: #e8e8e8;
+  /*background-color: #2d2d2d;*/
+  display: none;
+  position: fixed;
+  bottom: 1%;
+  right: 2.2%;
+  font-family: Lato, sans-serif!important;
+  font: 12px 'Open Sans', Helvetica, Arial, 'Sans-serif';
+  -moz-box-shadow: 0 0 7px #000;
+  -webkit-box-shadow: 0 0 7px #000;
+  box-shadow: 0 0 7px #000;
+  transition: height 500ms linear;
+}
+
+/*------DARK THEME / LIGHT THEME---------*/
+
+#changeTheme {
+  background-image: url("lightLight.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-color: #2d2d2d;
+  position: absolute;
+  bottom: 70%;
+  left: 101.5%;
+  -moz-box-shadow: 0 0 7px #000;
+  -webkit-box-shadow: 0 0 7px #000;
+  box-shadow: 0 0.1px 7px #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 0px 4.5px 1px 4.5px;
+  color: white;
+  height: 20px;
+  width: 20px;
+
+}
+
+#changeTheme:hover {
+  background-image: url("lightDark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-color: #e8e8e8;
+  transform: scale(1.1);
+}
+
+#changeTheme:focus {
+  outline: 0;
+}
+
+
+
+/*---------MAGNIFY THE TEXT--------------*/
+
+#magnify {
+  background-color: #70952e;
+  position: absolute;
+  bottom: 90%;
+  left: 101.5%;
+  -moz-box-shadow: 0 0 7px #000;
+  -webkit-box-shadow: 0 0 7px #000;
+  box-shadow: 0 0.1px 7px #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 0px 4.5px 1px 4.5px;
+  color: white;
+
+}
+
+#contract {
+  background-color: #70952e;
+  position: absolute;
+  bottom: 80%;
+  left: 101.5%;
+  -moz-box-shadow: 0 0 7px #000;
+  -webkit-box-shadow: 0 0 7px #000;
+  box-shadow: 0 0.1px 7px #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 0px 6.5px 1px 6.5px;
+  color: white;
+
+}
+
+#contract:focus,
+#magnify:focus,
+#tooltip:focus,
+#tooltip1:focus,
+#tooltip2:focus,
+#minimize:focus,
+#close:focus,
+#tooltip3:focus,
+#prechatButton:focus {
+  outline: 0;
+}
+
+#contract:hover,
+#magnify:hover {
+  background-image: -webkit-linear-gradient(top, #70952e, #546e23);
+  background-image: -moz-linear-gradient(top, #70952e, #546e23);
+  background-image: -ms-linear-gradient(top, #70952e, #546e23);
+  background-image: -o-linear-gradient(top, #70952e, #546e23);
+  background-image: linear-gradient(to bottom, #70952e, #546e23);
+  transform: scale(1.1);
+}
+
+#contract:hover {
+  cursor: zoom-out;
+}
+
+#magnify:hover {
+  cursor: zoom-in;
+}
+
+/*---------TOP CHAT WINDOW BAR-----------
+*/
+
+#windowTitle {
+  background-color: #70952e;
+  height: 30px;
+  width: 250px;
+  top: -10.5%;
+  position: absolute;
+  -moz-box-shadow: 0 0 7px #000;
+  -webkit-box-shadow: 0 0 7px #000;
+  box-shadow: 0 0.1px 7px #000;
+  font-weight: bold;
+}
+
+#minimize {
+  background-color: #70952e;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  bottom: 9%;
+  left: 87%;
+}
+
 #close {
-    background-color: #70952e; 
-    color: white;
-    padding: 6px 9px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
+  background-color: #70952e;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  bottom: 15%;
+  left: 90%;
+  display: none;
+}
+
+#windowTitleText {
+  color: white;
+  /*color: #2d2d2d;*/
+  text-align: left;
+  bottom: 10%;
+  left: 5.0%;
+  position: relative;
+  font-size: 12px;
+}
+
+
+/*---------ACTUAL CHAT WINDOW AND TEXT INPUT WITH SEND BUTTON---------*/
+
+#chatWindow {
+  resize: none;
+  height: 240px;
+  width: 250px;
+  /*position: relative;*/
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+/*---------DIV TO TYPE MESSAGES--------*/
+
+#inputArea {
+  bottom: 0%;
+  right: 0%;
+  height: 50px;
+}
+
+#chatText {
+  background-color: #f7f7f7;
+  /*background-color: #546353;*/
+  bottom: -12%;
+  right: -4.6%;
+  position: relative;
+  width: 220px;
+  height: 30px;
+  border: 1px solid #70952e;
+  resize: none;
+  font-family: Lato, sans-serif!important;
+  font: 12.5px 'Open Sans', Helvetica, Arial, 'Sans-serif';
+}
+
+#chatText:focus {
+  border-left: 6px solid #70952e;
+  width: 215px;
+  box-shadow: none;
+  outline: none;
+}
+
+
+/*-------TEST BUTTON TO NEW PAGE---------*/
+
+/*#nextPage {*/
+
+/*  color: white;*/
+
+/*  position: relative;*/
+
+/*  bottom: -50%;*/
+
+/*  left: 50%;*/
+
+/*  width: 200px;*/
+
+/*  height: 200px;*/
+
+/*  background-color: black;*/
+
+/*}*/
+
+/*--------CUSTOM SCROLL BAR-----------------*/
+
+#chatWindow::-webkit-scrollbar {
+  width: 7px;
+  background-color: #66787f;
+}
+
+/* Track */
+
+#chatWindow::-webkit-scrollbar-track {
+  background: 'white';
+  /*background: #546353; #c6c6c6 */
+}
+
+/* Handle */
+
+#chatWindow::-webkit-scrollbar-thumb {
+  background: #5093b7;
+}
+
+/* Handle on hover */
+
+#chatWindow::-webkit-scrollbar-thumb:hover {
+  background: #70952e;
+}
+
+/*----TOOL TIPS------*/
+
+#close #tooltip {
+  visibility: hidden;
+  width: 70px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -35px;
+  font-size: 12px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#close:hover #tooltip {
+  visibility: visible;
+  opacity: .75;
+  transition-delay: .2s;
+
+}
+
+#minimize #tooltip1 {
+  visibility: hidden;
+  width: 80px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -40px;
+  font-size: 12px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#minimize:hover #tooltip1 {
+  visibility: visible;
+  opacity: .75;
+  transition-delay: .2s;
+}
+
+#zoomText #tooltip2 {
+  visibility: hidden;
+  width: 60px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 85%;
+  left: 87%;
+  margin-left: -30px;
+  font-size: 12px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#zoomText:hover #tooltip2 {
+  visibility: visible;
+  opacity: .75;
+  transition-delay: .2s;
+
+}
+
+
+#minimize:hover {
+  background-image: -webkit-linear-gradient(top, #70952e, #546e23);
+  background-image: -moz-linear-gradient(top, #70952e, #546e23);
+  background-image: -ms-linear-gradient(top, #70952e, #546e23);
+  background-image: -o-linear-gradient(top, #70952e, #546e23);
+  background-image: linear-gradient(to bottom, #70952e, #546e23);
+}
+
+#close:hover {
+  background-image: -webkit-linear-gradient(top, #70952e, #546e23);
+  background-image: -moz-linear-gradient(top, #70952e, #546e23);
+  background-image: -ms-linear-gradient(top, #70952e, #546e23);
+  background-image: -o-linear-gradient(top, #70952e, #546e23);
+  background-image: linear-gradient(to bottom, #70952e, #546e23);
+}
+
+#darkTheme #tooltip3 {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 69%;
+  left: 87%;
+  margin-left: -70px;
+  font-size: 12px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#darkTheme:hover #tooltip3 {
+  visibility: visible;
+  opacity: .75;
+  transition-delay: .2s;
+
+}
+
+
+
+/*_____UAT SUBMIT INFORMATION____*/
+
+#UAT {
+  top: 40%;
+  left: 40%;
+  height: 150px;
+  width: 420px;
+  position: absolute;
+  background-color: #344416;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 5px 10px 18px black;
+}
+
+#UATTitle {
+  top: 27px;
+  left: 55px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  font-size: 1.3em;
+  font-family: "Impact", Charcoal, sans-serif
+}
+
+#UATPic {
+  background-image: url('submit.png');
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 15px;
+  background-size: cover;
+  left: 335px;
+}
+#UATPic:hover{
+  /*background-image: url('hitting.gif_c200');*/
+  /*left: 330px;*/
+  cursor: pointer;
+}
+
+#UATSubmit {
+  background-color: #f7f7f7;
+  /*background-color: #546353;*/
+  top: -20px;
+  left: 20px;
+  position: relative;
+  width: 300px;
+  height: 50px;
+  border: 1px solid #70952e;
+  resize: none;
+  font-family: Lato, sans-serif!important;
+  font: 12.5px 'Open Sans', Helvetica, Arial, 'Sans-serif';
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: 1px 1px 5px black;
 }
